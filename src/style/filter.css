@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 1200px;
+    padding: 1rem 0rem;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input {
+    padding: 0.5rem;
+    border: none;
+    border:  solid 2px  rgb(221, 221, 221);
+    border-radius: 0.3rem;
+    color:  rgb(143, 143, 143);
+}
+.search {
+    background-color: rgb(22, 232, 22);
+    padding: 0.5rem;
+    border: none;
+    border:  solid 2px  rgb(221, 221, 221);
+    border-radius: 0.3rem;
+    color:  white;
+    cursor: pointer;
+}
