@@ -4,10 +4,17 @@
         include(("src/services/categorias.php"));
         $categorias = getCategorias();
 
+        if(isset($_POST['xnombre'])){
+            $nombre=$_POST['xnombre'];
+        }
+        if(isset($_POST['xprovedor'])){
+            $provedorfilter=$_POST['xprovedor'];
+        }
         $where = "";
-        $nombre=$_POST['xnombre'];
-        $provedorfilter=$_POST['xprovedor'];
-        $categoriafilter=$_POST['xcategoria'];
+        if(isset($_POST['xcategoria'])){
+            $categoriafilter=$_POST['xcategoria'];
+        }
+        $where = "";
     ?>
     <form method="post" class="form">
         <input class="nombre input" type="text" name="xnombre" placeholder="Ingrese nombre de producto">
@@ -38,10 +45,12 @@
         if(empty($_POST['xprovedor']) && empty($_POST['xcategoria'])){
             return;
         }
-        if(empty($_POST['xprovedor'])){
-            $where = "WHERE producto_categoria = ".$categoriafilter;
-        } elseif(empty($_POST['xcategoria'])) {
+        if($_POST['xprovedor'] <> "" && empty($_POST['xcategoria'])){
             $where = "WHERE producto_provedor = ".$provedorfilter;
+        } elseif($_POST['xcategoria'] <> "" && empty($_POST['xprovedor'])) {
+            $where = "WHERE producto_categoria = ".$categoriafilter;
+        } elseif($_POST['xcategoria'] <> "" && $_POST['xprovedor'] <> ""){
+            $where = "WHERE producto_categoria = ".$categoriafilter." AND  producto_provedor = ".$provedorfilter; 
         }
     } 
 ?>

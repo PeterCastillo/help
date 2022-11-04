@@ -1,11 +1,6 @@
 <?php
     $conn = mysqli_connect("localhost", "root", "", "licoreriaproductos");
-
-    if(empty($where)){
-        $sql = 'SELECT * FROM productos';
-    } else{
-        $sql = 'SELECT * FROM productos '.$where;
-    }
+    $sql = 'SELECT * FROM productos '.$where;
     $res = mysqli_query($conn,$sql);
     while($producto=mysqli_fetch_array($res)){
 ?>
@@ -30,14 +25,11 @@
                 </p>
             </div>
             <div class="pdr_info_btn">
-                <div class="pdr_info_btn_cantidad">
-                    <span class="btn less"><i class="fa-solid fa-minus"></i></span>
-                    <span class="btn cant"> <?php echo $producto['producto_cantidad']?></span>
-                    <span class="btn plus"><i class="fa-solid fa-plus"></i></span>
-                </div>
-                <span class="btnDelete"><i class="fa-solid fa-trash"></i></span>
+                <span class="btnModify"><a href=""><i class="fa-solid fa-pen-to-square"></i></a></span>
+                <span class="btnDelete" method="post" name="delete"><a href="src/services/delete.php?id=<?php echo $producto['producto_id']?>" ><i class="fa-solid fa-trash"></i></a></span>
             </div>
         </div>
+        <span class="cantidad"><i class="fa-sharp fa-solid fa-bottle-droplet"></i> : <?php echo $producto['producto_cantidad']?></span>
     </div>
 <?php
     }
