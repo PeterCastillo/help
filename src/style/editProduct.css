@@ -1,0 +1,54 @@
+
+
+.editInputContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.edidtInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.editProductoContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    background-color: rgba(243, 241, 241, 0.912);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.edidtinpuirtadd {
+    width: 32%;
+}
+
+.selectadd {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.selectedEdit {
+    flex-grow: 1;
+}
+.txtedidtprd{
+    resize: none;
+    width: 100%;
+    height: 4rem;
+}
+
+.btnedid {
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border:  solid 2px  rgb(221, 221, 221);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+

@@ -23,6 +23,6 @@
     color:  white;
     cursor: pointer;
 }
-/* 
-INSERT INTO licoreriaproductos(producto_nombre, producto_descripcion,producto_img,producto_marca,producto_categoria,producto_provedor,producto_cantidad,producto_precio)
+
+/* INSERT INTO licoreriaproductos(producto_nombre, producto_descripcion,producto_img,producto_marca,producto_categoria,producto_provedor,producto_cantidad,producto_precio)
     VALUES('Pete','g´qejg´ñejgopegjeropgjeqropjgopèjgopeqrgjeropgjeqopeq','https://plazavea.vteximg.com.br/arquivos/ids/620410-1000-1000/20191228.jpg',"Castillo",50,200,20,51.1) */

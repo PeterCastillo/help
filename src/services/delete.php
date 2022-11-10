@@ -5,6 +5,6 @@
     $query = $conn->query($sql);
     $conn->close();
     if($query){
-        Header("Location: http://localhost/LicoreriaManagement/");
+        Header("Location: http://localhost/Licoreria/LicoreriaManagement/");
     }
 ?>

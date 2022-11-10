@@ -1,8 +1,10 @@
 .productos_container {
-    display: flex;
-    flex-direction: column;
     gap: 0.8rem;
     font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -10,8 +12,63 @@
     margin: auto;
     font-family: 'Poppins', sans-serif;
 }
-
 .title_productos {
     font-size: 2rem;
     font-weight: bold;
+}
+.addProducto {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.inputsadd {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputsadd_input {
+    width: 32%;
+}
+
+.selectadd {
+    display: flex;
+    gap: 0.4rem;
+}
+.selectadd_select {
+    flex-grow: 1;
+}
+
+.textareadd {
+    resize: none;
+    height: 4rem;
+}
+.btnADD {
+    width: 100%;
+    background-color: rgb(24, 186, 24);
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border:  solid 2px  rgb(221, 221, 221);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.btnADD a {
+    color: white;
+    text-decoration: none;
+}
+.editadd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0rem 0.5rem;
+}
+.fileImg {
+    width: 100%;
 }

@@ -15,7 +15,9 @@
     <title>Document</title>
 </head>
 <body>
-
+    <?php
+        include("src/components/añadir.php")
+    ?>
     <secction> 
         <div class="title"><span class="title_productos">Productos</span></div>
         <?php include("src/components/filter.php")?>

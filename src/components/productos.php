@@ -6,7 +6,7 @@
 ?>
     <div class="pdr">
         <div class="pdr_img">
-            <img class="pdr_img_img" src=<?php echo $producto['producto_img']?> alt="">
+            <img class="pdr_img_img" src="src/imagenes/<?php echo $producto['producto_img']?>" alt="">
         </div>
         <div class="pdr_info">
             <div class="pdr_info_details">
@@ -21,11 +21,11 @@
                     <span>Categoria: <?php echo $producto['producto_categoria']?></span>
                 </div>
                 <p class="desc">
-                    Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ut eius optio, omnis voluptatibus, debitis commodi aspernatur magnam unde asperiores veritatis harum pariatur voluptatem?. 
+                    Descripcion: <?php echo $producto['producto_descripcion']?> 
                 </p>
             </div>
             <div class="pdr_info_btn">
-                <span class="btnModify"><a href=""><i class="fa-solid fa-pen-to-square"></i></a></span>
+                <span class="btnModify"><a href="src/components/updateProd.php?id=<?php echo $producto['producto_id']?>"><i class="fa-solid fa-pen-to-square"></i></a></span>
                 <span class="btnDelete" method="post" name="delete"><a href="src/services/delete.php?id=<?php echo $producto['producto_id']?>" ><i class="fa-solid fa-trash"></i></a></span>
             </div>
         </div>

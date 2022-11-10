@@ -1,7 +1,5 @@
 <?php
-        include("src/services/provedores.php");
         $provedores = getProvedores();
-        include(("src/services/categorias.php"));
         $categorias = getCategorias();
 
         if(isset($_POST['xnombre'])){
@@ -17,9 +15,8 @@
         $where = "";
     ?>
     <form method="post" class="form">
-        <input class="nombre input" type="text" name="xnombre" placeholder="Ingrese nombre de producto">
         <select name="xprovedor" class="provedor input">
-            <option value="">Provedor</option>
+            <option value="">Proveedor</option>
             <?php
                 foreach($provedores as $provedor){
             ?>
@@ -28,6 +25,7 @@
                 }
             ?>
         </select>
+        <span class="btnModify editadd"><a href="src/components/prov.php?id=<?php?>"><i class="fa-solid fa-pen-to-square"></i></a></span>
         <select class="categoria input" name="xcategoria">
             <option value="">Categoria</option>
             <?php
@@ -38,6 +36,7 @@
                 }
             ?>
         </select>
+        <span class="btnModify editadd"><a href="src/components/categoria.php?id=<?php?>"><i class="fa-solid fa-pen-to-square"></i></a></span>
         <button name="buscar" type="submit" class="search">Buscar</button>
     </form>
 <?php
